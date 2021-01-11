@@ -1,8 +1,5 @@
 import asyncio
 import os
-
-os.system('pip install -U uvloop')
-
 import uvloop
 import sys
 
@@ -13,14 +10,14 @@ if not os.getenv('DEVICE_ID') and \
           "If you're confused, re-watch the tutorial.")
     sys.exit()
 
-os.system('pip install -U SEKKAYBOT')
+os.system('pip install -U FNBOT2')
 os.system('clear')
 
-import SEKKAYBOT
+import FNBOT2
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
-client = SEKKAYBOT.PartyBot(
+client = FNBOT2.PartyBot(
     device_id=os.getenv('DEVICE_ID'),
     account_id=os.getenv('ACCOUNT_ID'),
     secret=os.getenv('SECRET')
